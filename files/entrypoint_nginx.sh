@@ -430,6 +430,12 @@ if [[ -x /custom/files/customize_misp.sh ]]; then
     /custom/files/customize_misp.sh
 fi
 
+echo "INIT | Change nginx back to MISP ..."
+sed -i "s@root /var/www/html@#root /var/www/html@g" /etc/nginx/sites-available/misp443
+sed -i "s@index index.php@#index index.php@g" /etc/nginx/sites-available/misp443
+sed -i "s@###@@g" /etc/nginx/sites-available/misp443
+nginx -s reload
+
 # Restart PHP workers
 echo "INIT | Configure PHP ..."
 supervisorctl restart php-fpm

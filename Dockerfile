@@ -73,6 +73,8 @@ EOF
 
 COPY files/ /
 
+COPY scripts/ /opt/scripts-hackinsdn/
+
 WORKDIR /var/www/MISP
 
 EXPOSE 80 443

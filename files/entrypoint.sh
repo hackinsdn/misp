@@ -26,6 +26,7 @@ export DISABLE_CA_REFRESH=${DISABLE_CA_REFRESH:-false}
 export SMTP_FQDN=${SMTP_FQDN:-localhost}
 
 export ADMIN_EMAIL=${ADMIN_EMAIL:-admin@localhost}
+export ADMIN_PASSWORD=${ADMIN_PASSWORD:-hackinsdn}
 export GPG_PASSPHRASE=${GPG_PASSPHRASE:-passphrase}
 export MISP_MODULES_FQDN=${MISP_MODULES_FQDN:-http://localhost}
 export ATTACHMENTS_DIR=${ATTACHMENTS_DIR:-/var/www/MISP/app/files}

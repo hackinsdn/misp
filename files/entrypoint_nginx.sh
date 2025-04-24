@@ -374,10 +374,10 @@ init_nginx() {
     fi
     if [[ "$DISABLE_IPV6" = "true" ]]; then
         echo "... disabling IPv6 on port 443"
-        sed -i "s/[^#] listen \[/  # listen \[/" /etc/nginx/sites-enabled/misp443
+        sed -i "s/[^#] listen \[/  # listen \[/" /etc/nginx/sites-available/misp443
     else
         echo "... enabling IPv6 on port 443"
-        sed -i "s/# listen \[/listen \[/" /etc/nginx/sites-enabled/misp443
+        sed -i "s/# listen \[/listen \[/" /etc/nginx/sites-available/misp443
     fi
     
     if [[ ! -f /etc/nginx/certs/cert.pem || ! -f /etc/nginx/certs/key.pem ]]; then
@@ -432,7 +432,7 @@ fi
 
 echo "INIT | Change nginx back to MISP ..."
 sed -i "s@root /var/www/html@#root /var/www/html@g" /etc/nginx/sites-available/misp443
-sed -i "s@index index.php@#index index.php@g" /etc/nginx/sites-available/misp443
+sed -i "s@index index.html@#index index.html@g" /etc/nginx/sites-available/misp443
 sed -i "s@###@@g" /etc/nginx/sites-available/misp443
 nginx -s reload
 

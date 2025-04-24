@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export ADMIN_ORG=${ADMIN_EMAIL:-HackInSDN}
+export ADMIN_ORG=${ADMIN_ORG:-HackInSDN}
 
 # export env variables again so they are not mandatory in docker-compose.yml in a backward compatible manner
 export NUM_WORKERS_DEFAULT=${NUM_WORKERS_DEFAULT:-${WORKERS:-5}}

@@ -10,7 +10,7 @@ RUN apt-get update; apt-get install -y --no-install-recommends \
         ca-certificates curl git gettext procps sudo nginx rsync jq \
 	supervisor cron openssl gpg gpg-agent rsyslog zip unzip \
         postfix redis-server mariadb-client mariadb-server sqlite3 \
-	iproute2 net-tools iputils-ping socat \
+	iproute2 net-tools iputils-ping socat yara \
 	php8.2 php8.2-apcu php8.2-curl php8.2-xml php8.2-intl php8.2-bcmath \
         php8.2-mbstring php8.2-mysql php8.2-redis php8.2-gd php8.2-fpm \
 	php8.2-zip php8.2-ldap libmagic1 libldap-common librdkafka1 \

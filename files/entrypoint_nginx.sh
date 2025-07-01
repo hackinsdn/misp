@@ -390,7 +390,7 @@ init_nginx() {
     
     if [[ ! -f /etc/nginx/certs/dhparams.pem ]]; then
         echo "... generating new DH parameters"
-        openssl dhparam -out /etc/nginx/certs/dhparams.pem 2048
+        openssl dhparam -dsaparam -out /etc/nginx/certs/dhparams.pem 2048
     else
         echo "... DH parameters found"
     fi
